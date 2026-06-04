@@ -7,6 +7,10 @@
 </p>
 
 <p align="center">
+  ⏳ <b>Note:</b> Since this project is hosted on <b>Render's free tier</b>, the website may take <b>50–60 seconds to load</b> when opened for the first time (after being inactive). Please be patient — it will load shortly! 💖
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Django-5.0-092E20?style=for-the-badge&logo=django&logoColor=white"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
