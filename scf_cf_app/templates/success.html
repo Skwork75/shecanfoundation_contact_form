@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Sent | She Can Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #e8eaf6 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
+            background: linear-gradient(135deg, #880e4f, #6a1b9a);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(136, 14, 79, 0.3);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .navbar .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .navbar .logo-text {
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .navbar .logo-text span {
+            color: #f8bbd0;
+            font-weight: 300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f8bbd0;
+        }
+
+        /* ========== MAIN CONTENT ========== */
+        .main-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .success-card {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(136, 14, 79, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .success-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, #880e4f, #6a1b9a, #4a148c);
+        }
+
+        /* ========== SUCCESS ICON ========== */
+        .success-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #880e4f, #6a1b9a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 40px;
+            animation: scaleIn 0.5s ease;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-card h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #880e4f;
+            margin-bottom: 10px;
+        }
+
+        .success-card h1 .user-name {
+            color: #6a1b9a;
+        }
+
+        .success-card .main-message {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* ========== INFO BOX ========== */
+        .info-box {
+            background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #880e4f;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box ul li {
+            font-size: 13px;
+            color: #555;
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 400;
+        }
+
+        .info-box ul li .check {
+            color: #880e4f;
+            font-weight: 700;
+        }
+
+        /* ========== BUTTONS ========== */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 13px 30px;
+            background: linear-gradient(135deg, #880e4f, #6a1b9a);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(136, 14, 79, 0.35);
+        }
+
+        .btn-secondary {
+            padding: 13px 30px;
+            background: white;
+            color: #880e4f;
+            border: 2px solid #880e4f;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #fce4ec;
+            transform: translateY(-2px);
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: linear-gradient(135deg, #880e4f, #6a1b9a);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .footer span {
+            color: #f8bbd0;
+            font-weight: 500;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .success-card {
+                padding: 40px 25px;
+            }
+
+            .success-card h1 {
+                font-size: 22px;
+            }
+
+            .navbar {
+                padding: 12px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">🌸</div>
+            <div class="logo-text">She Can <span>Foundation</span></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="https://shecanfoundation.org/" target="_blank">Home</a></li>
+            <li><a href="https://shecanfoundation.org/our-story" target="_blank">About Us</a></li>
+            <li><a href="https://shecanfoundation.org/donate" target="_blank">Programs</a></li>
+            <li><a href="{% url 'contact_form' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="main-container">
+        <div class="success-card">
+
+            <!-- SUCCESS ICON -->
+            <div class="success-icon">✅</div>
+
+            <!-- HEADING WITH USER NAME -->
+            <h1>
+                Thank You, <span class="user-name">{{ name }}</span>! 🎉
+            </h1>
+
+            <!-- MAIN MESSAGE -->
+            <p class="main-message">
+                Your message has been successfully submitted to 
+                <strong>She Can Foundation</strong>. We truly appreciate 
+                you taking the time to reach out to us. Our team will 
+                review your message and get back to you as soon as possible.
+            </p>
+
+            <!-- INFO BOX -->
+            <div class="info-box">
+                <h3>💜 What Happens Next?</h3>
+                <ul>
+                    <li>
+                        <span class="check">✓</span>
+                        Our team will review your message within 24-48 hours
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        You will receive a response at your registered email
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        For urgent queries, reach us at president@shecanfoundation.org
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="button-group">
+                <a href="{% url 'contact_form' %}" class="btn-primary">
+                    Send Another Message 💌
+                </a>
+                <a href="https://shecanfoundation.org/" class="btn-secondary" target="_blank">
+                    Visit Our Website 🌐
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        © 2025 <span>She Can Foundation</span> | Empowering Women, Transforming Lives 💜
+    </footer>
+
+</body>
+</html>
